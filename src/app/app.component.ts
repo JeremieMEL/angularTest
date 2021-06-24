@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'doc-project';
+
+  $isDisabled : boolean = true;
+
+  constructor(){}
+
+
+
+alertMessage()
+{
+alert("Vous venez de cliquer sur le bouton");
+}
+
+
 }
