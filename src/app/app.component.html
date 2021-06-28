@@ -1,4 +1,20 @@
-<button (click)="alertMessage()" [disabled]="$isDisabled">Cliquez ici!</button>
+<!-- <button (click)="alertMessage()" [disabled]="$isDisabled">Cliquez ici!</button>
 <app-voiture></app-voiture>
 <app-voiture></app-voiture>
-<app-voiture></app-voiture>
+<app-voiture></app-voiture> -->
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- <app-gestionnaire (addedVoiture)="addVoitureToList($event);"></app-gestionnaire> -->
+        <app-gestionnaire></app-gestionnaire>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+          <!-- binding property pour transmission de l'objet voiture vers le voitureCompoent à travaers theVoiture -->
+      <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div> 

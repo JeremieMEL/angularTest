@@ -1,18 +1,34 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+
 import { AppComponent } from './app.component';
 import { VoitureComponent } from './voiture/voiture.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { GestionnaireComponent } from './gestionnaire/gestionnaire.component';
+import { DetailComponent } from './detail/detail.component';
+import { RouterModule, Routes } from '@angular/Router';
 
+
+const ROUTES: Routes = [
+  {path: "", component: GarageComponent},
+  {path: 'voitures/:marque', component: DetailComponent}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    VoitureComponent
+    VoitureComponent,
+    GestionnaireComponent,
+    DetailComponent,
+    GarageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [VoitureService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

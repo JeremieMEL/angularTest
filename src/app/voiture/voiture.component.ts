@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from "@angular/core";
+// import * as EventEmitter from "events";
+import { Voiture } from "src/Model/Voiture";
+
 
 @Component({
   selector: 'app-voiture',
@@ -6,8 +9,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./voiture.component.css']
 })
 export class VoitureComponent {
-marque = "renault"
-color = "bleue"
+// marque = "renault"
+// color = "bleue"
+@Input()
+theVoiture: Voiture;
 
+@Output()
+selectedVoitureEvent : EventEmitter<Voiture> = new EventEmitter();
+
+selectVoiture(){
+  this.selectedVoitureEvent.emit(this.theVoiture);
+}
 
 }
