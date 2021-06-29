@@ -4,7 +4,7 @@ import { Voiture } from 'src/Model/Voiture';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
-  styles: ['./detail.component.css'
+  styleUrls: ['./detail.component.css'
   ]
 })
 export class DetailComponent implements OnInit {

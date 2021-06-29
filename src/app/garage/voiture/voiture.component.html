@@ -1,1 +1,3 @@
-<div class="voiture" (click)="selectVoiture()">Voiture de marque {{ theVoiture.marque }} et dont le modèle est {{ theVoiture.modele }}</div>
+<div class="voiture" (click)="selectVoiture()">Voiture de marque {{ theVoiture.marque }} et dont le modèle est {{ theVoiture.modele }}
+<button routerLink="/voitures/{{ theVoiture.marque }}" class="btn btn-success" type="button">Detail</button>
+</div>
