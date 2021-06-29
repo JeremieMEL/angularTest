@@ -4,7 +4,7 @@ import { Voiture } from 'src/Model/Voiture';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
-  stylesUrl: ['./detail.component.css'
+  styles: ['./detail.component.css'
   ]
 })
 export class DetailComponent implements OnInit {
@@ -16,5 +16,4 @@ export class DetailComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
